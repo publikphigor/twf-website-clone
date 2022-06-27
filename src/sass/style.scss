@@ -139,7 +139,7 @@ header {
         border: none;
         cursor: pointer;
         & > div {
-          background-color: &$white-color;
+          background-color: $white-color;
         }
       }
     }
