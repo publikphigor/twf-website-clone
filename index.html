@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <title>Document</title>
+    <title>Trees With Faces</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="dist/css/style.css" />
@@ -24,7 +30,7 @@
       </div>
       <nav>
         <a href="#" class="btn btn-outline">Discord</a>
-        <a href="#" class="btn btn-outline">Connectmy wallet</a>
+        <a href="#" class="btn btn-outline">Connect my wallet</a>
         <div class="burger">
           <div class="line-1"></div>
           <div class="line-2"></div>
@@ -33,10 +39,13 @@
       </nav>
     </header>
 
+    <!-- ==== fix gap ==== -->
+    <div class="fix-gap"></div>
+
     <!-- ==== hero section ==== -->
     <div class="hero">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-12 col-md-6">
             <div>
               <div class="tree-bg">
@@ -54,20 +63,18 @@
           </div>
 
           <div class="col-12 col-md-6">
-            <div>
-              <div class="row">
-                <div class="hero-image">
-                  <img src="assets/hero-1.jpg" alt="TWF Image" />
-                </div>
-                <div class="hero-image">
-                  <img src="assets/hero-2.jpg" alt="TWF Image" />
-                </div>
-                <div class="hero-image">
-                  <img src="assets/hero-3.jpg" alt="TWF Image" />
-                </div>
-                <div class="hero-image">
-                  <img src="assets/hero-4.gif" alt="TWF Image" />
-                </div>
+            <div class="hero-images">
+              <div class="hero-image">
+                <img src="assets/hero-1.jpg" alt="TWF Image" />
+              </div>
+              <div class="hero-image">
+                <img src="assets/hero-2.jpg" alt="TWF Image" />
+              </div>
+              <div class="hero-image">
+                <img src="assets/hero-3.jpg" alt="TWF Image" />
+              </div>
+              <div class="hero-image">
+                <img src="assets/hero-4.gif" alt="TWF Image" />
               </div>
             </div>
           </div>
@@ -77,15 +84,21 @@
 
     <!-- ==== video animation ==== -->
     <div class="play-video">
-      <video src="assets/animated.mp4"></video>
+      <video
+        playsinline
+        autoplay
+        loop
+        preload="auto"
+        src="assets/animated.mp4"
+      ></video>
     </div>
 
     <!-- ==== welcome to twf ==== -->
-    <div class="container">
-      <div class="welcome-title">
+    <div class="container welcome-container" id="welcome">
+      <div>
         <h1 class="main-heading">
-          <span class="wt-line-1">Welcome to TWF! -</span>
-          <span class="wt-line-2">Trees with faces-</span>
+          <span class="wt-line-1">Welcome to TWF! —</span>
+          <span class="wt-line-2">Trees with faces</span>
         </h1>
         <a href="#" class="btn btn-fill wt-btn">Discord</a>
         <div class="row">
@@ -116,6 +129,96 @@
                 pool, passive rewards, charity donation and much more. Are you
                 ready?
               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==== swiper ==== -->
+      <div class="swiper">
+        <div class="swiper-card">
+          <img src="assets/swiper-1.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-2.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-3.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-4.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-5.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-6.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-7.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-8.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-9.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-10.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-11.webp" alt="Swiper Card" />
+        </div>
+        <div class="swiper-card">
+          <img src="assets/swiper-12.webp" alt="Swiper Card" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ==== about ==== -->
+    <div id="about">
+      <div class="container">
+        <div class="about-content">
+          <h1 class="main-heading">What about TWF! ?</h1>
+          <p>
+            You are about to dive into one of the coolest NFT projects to date,
+            getting a fancy unique profile pic of your fav Tree With Face. But
+            that's not all, folks. TWF! is a community-driven project, you will
+            be part of the future of TWF! : the community is the heart of the
+            project.
+          </p>
+        </div>
+        <div class="about-access">
+          <h2 class="sub-heading">TWF! Owners will have access to:</h2>
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div class="access-card access-card-1">
+                <h2 class="sub-heading">Community Vault</h2>
+                <p>
+                  We are launching a Community Vault as the treasury to support
+                  our community. We will reserve 20% of all the minting funds
+                  raised to revert to the community in the form of giveaways,
+                  passive rewards, a comic series, and giving the chance to
+                  choose where the roadmap takes us to!
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <div class="access-card access-card-2">
+                <h2 class="sub-heading">$TREES AND LIQUIDITY POOL</h2>
+                <p>
+                  We will provide an anti-paper hands system: Never sell below
+                  floor price thanks to our liquidity pool. Prices will be
+                  stabilised and even they may rise steadily in this way too.
+                </p>
+                <p>
+                  Additionally, if you deposit your TWF! NFT into the pool, you
+                  will earn our token $TREES. Earn fees by providing liquidity,
+                  and rewards by staking your $TREES+ETH LP Tokens. More info
+                  will come will come soon.
+                </p>
+              </div>
             </div>
           </div>
         </div>
