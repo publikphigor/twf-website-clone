@@ -18,6 +18,7 @@ h2 {
 p,
 .regular-text {
   color: $primary-color;
+  text-align: justify;
 }
 
 .main-heading {
@@ -66,7 +67,7 @@ p,
 
 ::-webkit-scrollbar-track {
   margin-block: 0.1rem;
-  background-color: $accent-color-two;
+  background-color: $white-color;
   border-radius: 10px;
 }
 
@@ -126,11 +127,11 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      gap: 4px;
+      gap: 3px;
 
       & > div {
         height: 2px;
-        width: 25px;
+        width: 20px;
         background-color: $accent-color;
       }
 
@@ -231,5 +232,168 @@ header {
     width: fit-content;
     margin: 0 auto 30px;
     border-radius: 152px;
+
+    &:hover {
+      color: $white-color;
+      background-color: #a28070;
+    }
+  }
+
+  .nft-number-container {
+    transform: rotate(-8deg);
+    margin-top: 10%;
+    margin-inline: auto;
+    width: fit-content;
+    position: relative;
+
+    .nft-number {
+      font-size: 90px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      left: 60%;
+      height: 195px;
+      width: 43px;
+      background: url("/assets/arrow.svg") center no-repeat;
+      transform: translateY(100%) rotate(-40deg);
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  gap: 30px;
+  scrollbar-width: thin;
+
+  .swiper-card {
+    flex-shrink: 0;
+    height: 270px;
+    width: 270px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 30px;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      object-position: bottom center;
+    }
+  }
+}
+
+#about {
+  padding-block: 50px;
+  margin-top: 10px;
+  background-color: $accent-color-two;
+
+  .about-content {
+    width: 75%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+
+    & .main-heading {
+      align-self: flex-start;
+    }
+
+    & p {
+      align-self: flex-end;
+      width: 70%;
+      margin-block: 30px;
+    }
+  }
+
+  .about-access {
+    margin-top: 20px;
+
+    & > .sub-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .access-card {
+      background-color: $white-color;
+      border: 4px solid $primary-color;
+      height: 350px;
+      border-radius: 28px;
+      padding: 40px 40px 50px;
+
+      .sub-heading {
+        font-size: 28px;
+      }
+    }
+
+    .access-card-1 {
+      background-image: url("/assets/safe.webp");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 250px;
+    }
+
+    .access-card-2 {
+      background-image: url("/assets/money.webp");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: 250px;
+    }
+  }
+}
+
+.roadmap-container {
+  width: 70%;
+  margin: 50px auto;
+
+  .main-heading {
+    text-align: center;
+  }
+
+  & > p {
+    width: 50%;
+    margin-inline: auto;
+    margin-block: 40px;
+    text-align: center;
+  }
+
+  .roadmap {
+    width: 60%;
+    margin-inline: auto;
+    border-left: 3px solid $primary-color;
+    padding-left: 30px;
+    padding-block: 10px;
+
+    .roadmap-item {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+
+      .sub-heading {
+        font-size: 24px;
+        font-weight: 900;
+        color: $primary-color;
+      }
+
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        background-color: $primary-color;
+        left: -37px;
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .roadmap-item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
