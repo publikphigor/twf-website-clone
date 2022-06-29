@@ -53,26 +53,17 @@ const faqContainers = document.querySelectorAll(".faq");
 const faqToggleBtns = document.querySelectorAll(".faq-toggle");
 const faqContents = document.querySelectorAll(".faq-content");
 
-function openAndCloseAccordion(accordArr, accordion) {
-  accordArr.classList.remove("active");
-  accordion.classList.toggle("active");
-}
-
-function rotateToggle(allBtns, switchBtn) {
-  allBtns.classList.remove("active");
-  switchBtn.classList.toggle("active");
-}
-
 for (const [btnIndex, toggleBtn] of faqToggleBtns.entries()) {
   toggleBtn.addEventListener("click", function (e) {
     faqToggleBtns.forEach((button) => {
+      if (button === e.target) return;
       button.classList.remove("active");
     });
-    e.target.classList.add("active");
-    console.log(toggleBtn);
-    for (const [contentIndex, faqContent] of faqContents.entries()) {
+    e.target.classList.toggle("active");
+    faqContents.forEach((faqContent) => {
+      if (faqContent === faqContents.item(btnIndex)) return;
       faqContent.classList.remove("active");
-      faqContents.item(btnIndex).classList.add("active");
-    }
+    });
+    faqContents.item(btnIndex).classList.toggle("active");
   });
 }
